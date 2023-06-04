@@ -25,6 +25,8 @@ export class CatComponent {
     return (this.showResult() ? `The count is ${this.count()}` : 'you cant see how many times you meowed')
   })
 
+  toggleShowResult() { this.showResult.update( res => res = !res)}
+
   private loggingEffect = effect(() => {
     console.log(`The count is: ${this.count()})`);
   });
